@@ -4,7 +4,7 @@ ENV BUILD_DEPS curl gcc git go musl-dev libffi-dev linux-headers libressl-dev py
 ENV RUNTIME_DEPS openvpn libressl ca-certificates python py-setuptools
 
 ENV PRITUNL_VERSION 1.29.1999.88
-ENV PRITUNL_SHA1 ff082af4d0c847b3b6ceb3a2a4da14b02d48f595
+ENV PRITUNL_SHA1 ebd9d3f8775ac7815515c4d2534f1033f8539f30
 ENV PRITUNL_URL https://github.com/pritunl/pritunl/archive/${PRITUNL_VERSION}.tar.gz
 
 RUN set -e \
