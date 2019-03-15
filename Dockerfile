@@ -35,6 +35,7 @@ RUN set -e \
     && apk del --purge $BUILD_DEPS \
     && rm -rf /tmp/* /var/cache/apk/* /go/*
 
+COPY openssl.cnf /etc/ssl/openssl.cnf
 COPY entrypoint.sh /bin/entrypoint.sh
 
 EXPOSE 80 443 1194 1194/udp
