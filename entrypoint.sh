@@ -6,19 +6,12 @@ distinguished_name = req_distinguished_name
 req_extensions = v3_req
 
 [req_distinguished_name]
-countryName_default = GB
 countryName = GB
-stateOrProvinceName_default = London
-stateOrProvinceName = Some-State
-localityName_default = Department for International Trade
-localityName = Locality Name (eg, city)
-organizationalUnitName_default = Digital
-organizationalUnitName = Organizational Unit Name (eg, section)
-commonName_default = ${DNS_NAME}
-commonName = Common Name (eg, YOUR name)
-commonName_max = 64
-emailAddress_default = webops@digital.trade.gov.uk
-emailAddress = Email Address
+stateOrProvinceName = London
+localityName = Department for International Trade
+organizationalUnitName = Digital
+commonName = ${DNS_NAME}
+emailAddress = webops@digital.trade.gov.uk
 
 [ v3_req ]
 # Extensions to add to a certificate request
