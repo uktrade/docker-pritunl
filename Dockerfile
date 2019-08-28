@@ -1,6 +1,6 @@
 FROM alpine:3.8
 
-ENV BUILD_DEPS curl gcc git go musl-dev libffi-dev linux-headers libressl-dev py2-pip python-dev
+ENV BUILD_DEPS curl gcc git go musl-dev libffi-dev linux-headers libressl-dev py2-pip python-dev make
 ENV RUNTIME_DEPS openvpn libressl ca-certificates python py-setuptools
 
 ENV PRITUNL_VERSION 1.29.2145.25
