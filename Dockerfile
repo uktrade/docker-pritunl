@@ -3,8 +3,8 @@ FROM alpine:3.10
 ENV BUILD_DEPS curl gcc git go musl-dev libffi-dev linux-headers libressl-dev py2-pip python-dev make
 ENV RUNTIME_DEPS openvpn libressl ca-certificates python py-setuptools
 
-ENV PRITUNL_VERSION 1.29.2395.63
-ENV PRITUNL_SHA1 9afe5d048e0e6b44900d5a2c70e1cb4963dd4508
+ENV PRITUNL_VERSION 1.29.2468.79
+ENV PRITUNL_SHA1 eee3edff1f5978827127bd74e74798ea127c6a66
 ENV PRITUNL_URL https://github.com/pritunl/pritunl/archive/${PRITUNL_VERSION}.tar.gz
 
 RUN set -e \
