@@ -10,7 +10,7 @@ hosts = db.hosts
 servers = db.servers
 
 hosts.delete_many({'status': 'offline'})
-hosts.update_one({'status': 'online', 'hostname': env('PRITUNL_HOST')}, {'$set': {'name': env('PRITUNL_HOST'), 'sync_address': env('PRITUNL_DOMAIN')}})
+hosts.update_one({'status': 'online', 'hostname': env('PRITUNL_HOST')}, {'$set': {'name': env('PRITUNL_HOST'), 'public_address': env('PRITUNL_DOMAIN'), 'sync_address': env('PRITUNL_DOMAIN')}})
 new_hosts = hosts.find({'status': 'online'})
 new_host_ids = []
 for host in new_hosts:
