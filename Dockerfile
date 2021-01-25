@@ -1,6 +1,6 @@
-FROM alpine:3.10
+FROM alpine:3.13
 
-ENV BUILD_DEPS curl gcc git go musl-dev libffi-dev linux-headers libressl-dev py2-pip python-dev make
+ENV BUILD_DEPS curl gcc git go musl-dev libffi-dev linux-headers libressl-dev python3 py3-pip python3-dev make
 ENV RUNTIME_DEPS openvpn libressl ca-certificates python py-setuptools
 
 ENV PRITUNL_VERSION 1.29.2664.67
@@ -12,7 +12,7 @@ RUN set -e \
     #
     # Install dependencies
     && apk --no-cache add --update ${RUNTIME_DEPS} ${BUILD_DEPS} \
-    && pip install --upgrade pip \
+    && pip3 install --upgrade pip \
     #
     # Install additional components
     && export GOPATH=/go \
@@ -27,9 +27,9 @@ RUN set -e \
     && cd pritunl-${PRITUNL_VERSION} \
     #
     # Build
-    && python2 setup.py build \
-    && pip install -r requirements.txt \
-    && python2 setup.py install \
+    && python3 setup.py build \
+    && pip3 install -r requirements.txt \
+    && python3 setup.py install \
     #
     # Clean up
     && apk del --purge $BUILD_DEPS \
